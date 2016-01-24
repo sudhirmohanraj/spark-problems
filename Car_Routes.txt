@@ -8,10 +8,10 @@ I-90,Nissan
 I-476,Kia
 I-80,Ford
 I-76,Ford
-I-435,Nissan
+I-76,Nissan
 I-90,Kia
-I-476,Kia
-I-80,Kia
+I-76,Kia
+I-90,Kia
 I-76,Ford
 I-435,Nissan
 I-90,Nissan

@@ -1,4 +1,4 @@
-/* PopularRoutesApp.java */
+package com.spark.problems.file;/* com.spark.problems.file.PopularRoutesApp.java */
 import org.apache.spark.api.java.*;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.function.FlatMapFunction;
@@ -6,7 +6,6 @@ import org.apache.spark.api.java.function.Function;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
 import scala.Tuple2;
-import scala.collection.parallel.ParIterableLike;
 
 import java.lang.System;
 import java.util.Arrays;
@@ -18,6 +17,7 @@ public class PopularRoutesApp {
         conf.set("spark.io.compression.codec","org.apache.spark.io.LZ4CompressionCodec");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
+        // Resilient Distributed DataSet.
         JavaRDD<String> routesData = sc.textFile("Car_Routes.txt").cache().flatMap(new FlatMapFunction<String, String>() {
             public Iterable<String> call(String s) throws Exception {
                 return Arrays.asList(s.split(","));
