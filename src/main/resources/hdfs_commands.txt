@@ -1,0 +1,12 @@
+# To insert a file into a directory.
+hdfs dfs -put /Users/wyh669/Downloads/spark-1.6.0/spark-problems/src/main/resources/Owners.json /input/Owners.json
+# To Create a directory
+hdfs dfs -mkdir /input
+# To leave safe mode
+hadoop dfsadmin -safemode leave
+# To view a list of files in a given directory.
+hadoop fs -ls /input
+# /usr/local/Cellar/hadoop/2.7.1/sbin to start and stop hdfs
+./start-all.sh ./stop-all.sh
+# When hdfs fails to start.
+hadoop namenode -format
