@@ -9,7 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Perfroms a join on two 1*N relationships table and filters it based on a criteria.
+ * Perfroms a join on two 1*N relationships table and filters it based on a criteria by
+ * retrieving data from mysql database.
  * @author mohanraj,sudhir
  */
 public class IndividualCarOwnersApp {
