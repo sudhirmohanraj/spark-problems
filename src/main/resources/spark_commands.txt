@@ -1,0 +1,4 @@
+# to start spark in a distributed fashion.
+./sbin/start-master.sh
+# to start a slave
+./sbin/start-slave.sh spark://acbc329feacb:7077
