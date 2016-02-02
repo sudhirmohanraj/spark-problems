@@ -10,3 +10,11 @@ hadoop fs -ls /input
 ./start-all.sh ./stop-all.sh
 # When hdfs fails to start.
 hadoop namenode -format
+# To check if there any deamon process running for hadoop
+ps -ef | grep namenode
+# To start a namenode
+hdfs namenode
+# To start a datanode
+hdfs datanode
+# To generate a report of the current status of data file system.
+hdfs dfsadmin -report 
